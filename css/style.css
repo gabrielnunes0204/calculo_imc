@@ -1,0 +1,188 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+body {
+  font-family: "Quicksand";
+  background: #ff7f26;
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #fff;
+  width: 900px;
+  padding: 50px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dados label {
+  font-size: 1.25rem;
+  display: block;
+}
+
+.dados .input {
+  font-family: "Quicksand";
+  font-size: 1.25rem;
+  width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.dados .input::placeholder {
+  font-size: 1rem;
+}
+
+.dados .botao {
+  margin-top: 10px;
+}
+
+.dados .botao-calcular {
+  display: block;
+  font-size: 1.15rem;
+  background: #ff7f26;
+  color: #fff;
+  width: 300px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.dados .botao-calcular:hover {
+  background: #faa958;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.informacao {
+  background: #3f47cc;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 460px;
+  padding: 20px;
+}
+
+.informacao p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.informacao p span {
+  font-weight: normal;
+}
+
+.informacao .info-pessoa.ativo {
+  animation: showInfo 0.5s forwards;
+}
+
+@keyframes showInfo {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.informacao .resultado {
+  font-weight: bold;
+  text-align: center;
+}
+
+.informacao .info-detalhes {
+  font-weight: normal;
+  text-align: center;
+}
+
+/* ALERTA */
+
+.alerta {
+  background: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: -530px;
+  width: 270px;
+  padding: 25px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.alerta span {
+  font-weight: bold;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 910px) {
+  form {
+    grid-template-columns: 1fr;
+    width: 600px;
+    text-align: center;
+  }
+
+  .dados .botao {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .informacao {
+    text-align: left;
+    width: 500px;
+  }
+
+  .alerta {
+    top: -860px;
+  }
+}
+
+@media (max-width: 620px) {
+  form {
+    width: 450px;
+  }
+
+  .informacao {
+    width: 350px;
+  }
+}

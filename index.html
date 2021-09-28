@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Seu IMC </title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="images/balanco.png">
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="titulo-principal"> Calcule seu IMC </h1>
+
+		<form>
+			<div class="dados">
+				<label for="nome"> Nome: </label>
+				<input type="text" name="nome" id="campoNome" class="input" placeholder="Fulano de tal">
+
+				<label for="idade"> Idade: </label>
+				<input type="number" name="idade" id="campoIdade" class="input" placeholder="22">
+
+				<label for="peso"> Peso: </label>
+				<input type="number" name="peso" id="campoPeso" class="input" placeholder="65">
+
+				<label for="altura"> Altura: </label>
+				<input type="number" name="altura" id="campoAltura" class="input" placeholder="1.72">
+
+				<div class="botao">
+					<a href="" class="botao-calcular"> Calcular IMC </a>
+				</div>
+			</div>
+
+			<div class="informacao">
+				<div>
+					<p> Nome: <span id="nome" class="info-pessoa"> </span></p>
+					<p> Idade: <span id="idade" class="info-pessoa"> </span></p>
+					<p> Peso: <span id="peso" class="info-pessoa"> </span></p>
+					<p> Altura: <span id="altura" class="info-pessoa"> </span></p>
+
+					<p> Seu IMC: <span id="imc"> </span></p>
+
+					<p class="info-imc">
+					<p class="resultado"> Resultado </p>
+					<p class="info-detalhes"> Carregando... </p>
+					</p>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="alerta">
+		<p> Corrija o campo <span> tal </span></p>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
